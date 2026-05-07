@@ -561,7 +561,58 @@
 			opacity: 0.3;
 			box-shadow: 0 0 20px #00d4ff;
 		  }
-}
+		}
+		
+		
+		
+		
+		
+				
+			/* Responsive Fixes for Mobile */
+		@media (max-width: 768px) {
+		  
+		  /* 1. Fix the Robot Visual (Nodes) */
+		  .robot-visual {
+			height: auto !important;
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: center !important;
+			gap: 15px !important;
+			margin-top: 40px;
+		  }
+
+		  /* Resetting the absolute positioning so nodes stack vertically */
+		  .node {
+			position: relative !important;
+			top: auto !important;
+			left: auto !important;
+			transform: none !important;
+			width: 90% !important;
+			text-align: center !important;
+			margin: 5px 0;
+		  }
+
+		  /* Hide the orbit lines on mobile to keep it clean */
+		  .orbit {
+			display: none !important;
+		  }
+
+		  .robot-core {
+			order: -1; /* Puts the central image at the top of the list */
+			margin-bottom: 20px;
+		  }
+
+		  /* 2. Fix the Project Image Grids */
+		  .project-media {
+			grid-template-columns: 1fr !important; /* Stack images in 1 column instead of 2 */
+		  }
+
+		  /* 3. Adjust the Hiring Notice */
+		  .hiring-notice, .hiring-notice-animated {
+			width: 95% !important;
+			font-size: 0.85rem !important;
+		  }
+		}	
 		
     </style>
   </head>
@@ -1139,6 +1190,7 @@
             <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
               <h4><i class="bx bx-envelope"></i> Email</h4>
               <p><a href="mailto:rajanprasad460@hotmail.com">rajanprasad460@hotmail.com</a></p>
+			  <p><a href="mailto:contact@rajan-prasad.com.np">contact@rajan-prasad.com.np</a></p>
             </div>
             <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
               <h4><i class="bx bx-link-external"></i> Links</h4>
