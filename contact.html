@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact | Dr. Rajan Prasad</title>
+    <meta
+      name="description"
+      content="Contact Dr. Rajan Prasad for robotics, dynamics, control, exoskeletons, soft manipulation, academic collaboration, talks, and research discussions."
+    />
+    <meta
+      name="keywords"
+      content="Rajan Prasad contact, robotics collaboration, dynamics control, C-LREX, exoskeleton, soft robotics, Khalifa University"
+    />
+
+    <link href="assets/img/favicon.ico" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #050b12;
+        --bg2: #081827;
+        --panel: rgba(10, 25, 39, 0.78);
+        --panel-strong: rgba(9, 22, 35, 0.94);
+        --line: rgba(109, 207, 246, 0.24);
+        --text: #edf8ff;
+        --muted: #9db5c8;
+        --cyan: #6dcff6;
+        --green: #7cfaa8;
+        --violet: #9b8cff;
+        --warning: #ffd166;
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 10% 12%, rgba(109, 207, 246, 0.20), transparent 28%),
+          radial-gradient(circle at 85% 18%, rgba(124, 250, 168, 0.14), transparent 30%),
+          radial-gradient(circle at 50% 100%, rgba(155, 140, 255, 0.12), transparent 34%),
+          linear-gradient(135deg, var(--bg), var(--bg2));
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.16;
+        background-image:
+          linear-gradient(rgba(109, 207, 246, 0.22) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(109, 207, 246, 0.22) 1px, transparent 1px);
+        background-size: 52px 52px;
+        mask-image: linear-gradient(to bottom, black, transparent 88%);
+        z-index: -3;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: auto -10% -30% -10%;
+        height: 420px;
+        background: radial-gradient(circle, rgba(109, 207, 246, 0.12), transparent 65%);
+        filter: blur(16px);
+        pointer-events: none;
+        z-index: -2;
+      }
+
+      a {
+        color: var(--cyan);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: var(--green);
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 18px clamp(18px, 4vw, 58px);
+        background: rgba(5, 11, 18, 0.72);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(18px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--text);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: linear-gradient(145deg, rgba(109, 207, 246, 0.18), rgba(124, 250, 168, 0.08));
+        box-shadow: 0 0 32px rgba(109, 207, 246, 0.14);
+        color: var(--green);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .nav-links a {
+        color: var(--muted);
+      }
+
+      .nav-links a:hover {
+        color: var(--text);
+      }
+
+      .page {
+        width: min(1180px, calc(100% - 36px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        min-height: 66vh;
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 42px;
+        align-items: center;
+        padding: 76px 0 44px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(109, 207, 246, 0.08);
+        color: var(--green);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      h1 {
+        margin: 24px 0 20px;
+        font-family: "Space Grotesk", Inter, sans-serif;
+        font-size: clamp(42px, 7vw, 86px);
+        line-height: 0.95;
+        letter-spacing: -0.06em;
+      }
+
+      h1 span {
+        display: block;
+        background: linear-gradient(90deg, var(--cyan), var(--green));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero p {
+        max-width: 660px;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.75;
+      }
+
+      .quick-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 30px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(109, 207, 246, 0.18), rgba(109, 207, 246, 0.06));
+        color: var(--text);
+        font-weight: 800;
+        box-shadow: 0 14px 40px rgba(109, 207, 246, 0.12);
+      }
+
+      .btn.secondary {
+        background: rgba(255, 255, 255, 0.045);
+      }
+
+      .signal-panel {
+        position: relative;
+        min-height: 500px;
+        border: 1px solid var(--line);
+        border-radius: 34px;
+        background:
+          linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025)),
+          radial-gradient(circle at 50% 20%, rgba(109, 207, 246, 0.22), transparent 42%);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .signal-panel::before,
+      .signal-panel::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        border: 1px dashed rgba(109, 207, 246, 0.34);
+        animation: orbit 28s linear infinite;
+      }
+
+      .signal-panel::before {
+        inset: 44px;
+      }
+
+      .signal-panel::after {
+        inset: 100px;
+        animation-duration: 18s;
+        animation-direction: reverse;
+      }
+
+      @keyframes orbit {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .contact-core {
+        position: absolute;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+        width: min(310px, 78%);
+        padding: 28px;
+        border-radius: 30px;
+        border: 1px solid rgba(124, 250, 168, 0.36);
+        background: rgba(5, 12, 20, 0.82);
+        box-shadow: 0 0 70px rgba(124, 250, 168, 0.14), inset 0 0 38px rgba(109, 207, 246, 0.08);
+        text-align: center;
+      }
+
+      .contact-core i {
+        font-size: 48px;
+        color: var(--green);
+      }
+
+      .contact-core h2 {
+        margin: 14px 0 6px;
+        font-family: "Space Grotesk", Inter, sans-serif;
+      }
+
+      .contact-core p {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .node {
+        position: absolute;
+        width: 116px;
+        padding: 11px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: rgba(5, 12, 20, 0.82);
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 800;
+        text-align: center;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.32);
+      }
+
+      .node i {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--cyan);
+        font-size: 22px;
+      }
+
+      .node.n1 { left: 28px; top: 68px; }
+      .node.n2 { right: 32px; top: 86px; }
+      .node.n3 { left: 42px; bottom: 76px; }
+      .node.n4 { right: 34px; bottom: 66px; }
+
+      section {
+        padding: 54px 0;
+      }
+
+      .section-title {
+        margin-bottom: 28px;
+      }
+
+      .section-title h2 {
+        margin: 0 0 12px;
+        font-family: "Space Grotesk", Inter, sans-serif;
+        font-size: clamp(30px, 4vw, 46px);
+        letter-spacing: -0.04em;
+      }
+
+      .section-title h2::after {
+        content: "";
+        display: block;
+        width: 82px;
+        height: 3px;
+        margin-top: 14px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--cyan), var(--green));
+      }
+
+      .section-title p {
+        max-width: 780px;
+        color: var(--muted);
+        line-height: 1.75;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 22px;
+        align-items: stretch;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(16px);
+      }
+
+      .contact-card {
+        padding: 26px;
+      }
+
+      .contact-method {
+        display: flex;
+        gap: 16px;
+        padding: 18px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .contact-method:last-child {
+        border-bottom: 0;
+      }
+
+      .method-icon {
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: rgba(109, 207, 246, 0.08);
+        color: var(--green);
+        font-size: 24px;
+      }
+
+      .contact-method h3 {
+        margin: 0 0 5px;
+        font-family: "Space Grotesk", Inter, sans-serif;
+        font-size: 19px;
+      }
+
+      .contact-method p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .form-card {
+        padding: 28px;
+      }
+
+      .form-card h2 {
+        margin-top: 0;
+        font-family: "Space Grotesk", Inter, sans-serif;
+        font-size: 30px;
+        letter-spacing: -0.03em;
+      }
+
+      .form-note {
+        color: var(--muted);
+        line-height: 1.7;
+        margin-bottom: 22px;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .field.full {
+        grid-column: 1 / -1;
+      }
+
+      label {
+        color: #d9f4ff;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid rgba(109, 207, 246, 0.28);
+        border-radius: 16px;
+        background: rgba(3, 10, 17, 0.66);
+        color: var(--text);
+        padding: 14px 15px;
+        font: inherit;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--green);
+        box-shadow: 0 0 0 4px rgba(124, 250, 168, 0.10);
+        background: rgba(4, 13, 22, 0.92);
+      }
+
+      textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      .submit-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .privacy-note {
+        max-width: 430px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .send-btn {
+        border: 1px solid rgba(124, 250, 168, 0.46);
+        border-radius: 16px;
+        padding: 14px 20px;
+        background: linear-gradient(90deg, rgba(109, 207, 246, 0.22), rgba(124, 250, 168, 0.18));
+        color: var(--text);
+        font-weight: 900;
+        cursor: pointer;
+        box-shadow: 0 14px 44px rgba(124, 250, 168, 0.12);
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 9px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.045);
+        color: #dff8ff;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .mini-card {
+        padding: 24px;
+      }
+
+      .mini-card i {
+        color: var(--green);
+        font-size: 32px;
+      }
+
+      .mini-card h3 {
+        margin: 16px 0 8px;
+        font-family: "Space Grotesk", Inter, sans-serif;
+      }
+
+      .mini-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      footer {
+        padding: 44px 0 54px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 980px) {
+        .hero,
+        .contact-grid,
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .signal-panel {
+          min-height: 430px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .topbar {
+          position: relative;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+        }
+
+        .hero {
+          padding-top: 46px;
+        }
+
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .node {
+          display: none;
+        }
+
+        .signal-panel {
+          min-height: 330px;
+        }
+
+        .contact-core {
+          width: 82%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Back to homepage">
+        <span class="brand-mark"><i class="bx bx-radar"></i></span>
+        <span>Rajan Prasad</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="https://rajan-prasad.com.np/">← Back to Home</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="hero">
+        <div>
+          <div class="eyebrow"><i class="bx bx-satellite"></i> Open Channel</div>
+          <h1>Let’s build the next <span>robotic motion system.</span></h1>
+          <p>
+            Reach out for research collaboration, robotics projects, speaking invitations,
+            academic discussion, manuscript review, repository access, or student mentoring
+            related to dynamics, control, exoskeletons, UGVs, and soft manipulators.
+          </p>
+          <div class="quick-actions">
+            <a class="btn" href="mailto:contact@rajan-prasad.com.np?subject=Collaboration%20Inquiry%20-%20Robotics%20and%20Dynamics">
+              <i class="bx bx-send"></i> Email Rajan
+            </a>
+            <a class="btn secondary" href="https://github.com/rajanprasad460" target="_blank" rel="noopener">
+              <i class="bx bxl-github"></i> View GitHub
+            </a>
+            <a class="btn secondary" href="https://orcid.org/0000-0003-3091-7138" target="_blank" rel="noopener">
+              <i class="bx bx-link-external"></i> ORCID
+            </a>
+          </div>
+        </div>
+
+        <aside class="signal-panel" aria-label="Contact signal visual">
+			<div class="robot-visual" data-aos="fade-left">
+			  <div class="orbit"></div>
+			  <div class="orbit"></div>
+			  <div class="orbit"></div>
+
+			  <!-- Node 1: Top Center -->
+			  <div class="node n1" style="position: absolute; top: 10%; left: 50%; transform: translate(-50%, -50%);">
+				C-LREX<br />Exoskeleton
+			  </div>
+
+			  <!-- Node 2: Top Right -->
+			  <div class="node n2" style="position: absolute; top: 25%; left: 85%; transform: translate(-50%, -50%);">
+				6WID<br />UGV
+			  </div>
+
+			  <!-- Node 3: Bottom Right -->
+			  <div class="node n3" style="position: absolute; top: 70%; left: 85%; transform: translate(-50%, -50%);">
+				Soft<br />Manipulator
+			  </div>
+
+			  <!-- Node 6: Bottom Center (NEW) -->
+			  <div class="node n6" style="position: absolute; top: 90%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+				Bio-inspired<br />Robotics
+			  </div>
+
+			  <!-- Node 4: Bottom Left -->
+			  <div class="node n4" style="position: absolute; top: 75%; left: 15%; transform: translate(-50%, -50%);">
+				Real-time<br />Control
+			  </div>
+
+			  <!-- Node 5: Top Left -->
+			  <div class="node n5" style="position: absolute; top: 25%; left: 15%; transform: translate(-50%, -50%); text-align: center;">
+				Design <br/>Dynamics <br/>& Control 
+			  </div>
+			</div>
+          <div class="contact-core">
+            <i class="bx bx-envelope-open"></i>
+            <h2>Primary Contact</h2>
+            <p><a href="mailto:contact@rajan-prasad.com.np">contact@rajan-prasad.com.np</a></p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="contact-options">
+        <div class="section-title">
+          <h2>Contact Routes</h2>
+          <p>
+            Choose the fastest route depending on what you want to discuss. Clear subject lines help route the conversation faster.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card contact-card">
+            <div class="contact-method">
+              <div class="method-icon"><i class="bx bx-phone"></i></div>
+              <div>
+                <h3>Phone</h3>
+                <p>
+                  <a href="tel:+971501240069">+971-501240069</a> (UAE)<br />
+                  <a href="tel:+9779848305168">+977-9848305168</a> (Nepal)<br />
+                  Direct call or WhatsApp for urgent collaboration or quick discussion.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="method-icon"><i class="bx bx-envelope"></i></div>
+              <div>
+                <h3>Email</h3>
+                <p>
+                  <a href="mailto:contact@rajan-prasad.com.np">contact@rajan-prasad.com.np</a><br />
+                  Best for collaborations, invitations, academic questions, and project inquiries.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="method-icon"><i class="bx bxl-github"></i></div>
+              <div>
+                <h3>GitHub</h3>
+                <p>
+                  <a href="https://github.com/rajanprasad460" target="_blank" rel="noopener">github.com/rajanprasad460</a><br />
+                  Explore tools, simulation repositories, and public project work.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="method-icon"><i class="bx bx-link"></i></div>
+              <div>
+                <h3>Research Identity</h3>
+                <p>
+                  <a href="https://orcid.org/0000-0003-3091-7138" target="_blank" rel="noopener">ORCID: 0000-0003-3091-7138</a><br />
+                  Use this for publication and research profile reference.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card form-card">
+            <h2>Start a Conversation</h2>
+            <p class="form-note">
+              This form opens your email app with a structured message. It works without a backend and keeps the page simple,
+              fast, and privacy-friendly.
+            </p>
+
+            <form id="contactForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Your Name</label>
+                  <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+                </div>
+
+                <div class="field">
+                  <label for="email">Your Email</label>
+                  <input id="email" name="email" type="email" placeholder="jane@example.com" required />
+                </div>
+
+                <div class="field">
+                  <label for="topic">Topic</label>
+                  <select id="topic" name="topic" required>
+                    <option value="Research Collaboration">Research Collaboration</option>
+                    <option value="Robotics Project">Robotics Project</option>
+                    <option value="Speaking Invitation">Speaking Invitation</option>
+                    <option value="Repository / Code Access">Repository / Code Access</option>
+                    <option value="Student Mentoring">Student Mentoring</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="organization">Organization</label>
+                  <input id="organization" name="organization" type="text" placeholder="University / Lab / Company" />
+                </div>
+
+                <div class="field full">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Briefly describe your idea, timeline, and how I can help." required></textarea>
+                </div>
+              </div>
+
+              <div class="submit-row">
+                <p class="privacy-note">
+                  No information is stored on this page. Submitting opens your email client with the message prepared.
+                </p>
+                <button class="send-btn" type="submit"><i class="bx bx-send"></i> Prepare Email</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      
+
+      
+    </main>
+
+    <footer>
+      <div class="page">
+        © <span id="year"></span> Rajan Prasad · Robotics, Dynamics & Motion Control ·
+        <a href="mailto:contact@rajan-prasad.com.np">contact@rajan-prasad.com.np</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const topic = document.getElementById("topic").value;
+        const organization = document.getElementById("organization").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        const subject = encodeURIComponent(`${topic} - Website Contact`);
+        const body = encodeURIComponent(
+          `Hello Dr. Prasad,\n\n` +
+          `My name is ${name}.\n` +
+          `Email: ${email}\n` +
+          `Organization: ${organization || "Not specified"}\n` +
+          `Topic: ${topic}\n\n` +
+          `Message:\n${message}\n\n` +
+          `Best regards,\n${name}`
+        );
+
+        window.location.href = `mailto:contact@rajan-prasad.com.np?subject=${subject}&body=${body}`;
+      });
+    </script>
+  </body>
+</html>
